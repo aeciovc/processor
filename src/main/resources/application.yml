@@ -1,0 +1,23 @@
+spring:
+  # Source
+  source:
+    activemq:
+      broker-url: tcp://localhost:61616
+      username: admin
+      password: admin
+
+    queue: inbound.queue
+
+  # Destination
+  destination:
+    activemq:
+      broker-url: tcp://localhost:61616
+      username: admin
+      password: admin
+
+    topic: outbound.topic
+
+logging:
+  level:
+    ROOT: INFO
+    es.com.kuehne.processor: INFO

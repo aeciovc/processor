@@ -1,0 +1,23 @@
+spring:
+  # Source
+  source:
+    activemq:
+      broker-url: vm://localhost?broker.persistent=false
+      username: admin
+      password: admin
+
+    queue: inbound.queue
+
+  # Destination
+  destination:
+    activemq:
+      broker-url: vm://localhost?broker.persistent=false
+      username: admin
+      password: admin
+
+    topic: outbound.topic
+
+logging:
+  level:
+    ROOT: INFO
+    es.com.kuehne.processor: INFO
